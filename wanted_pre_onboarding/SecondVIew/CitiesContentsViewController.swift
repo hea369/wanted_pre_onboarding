@@ -37,7 +37,6 @@ class CitiesContentsViewController: UIViewController {
             atmosphericPressure.text = cityDetail.atmo
             wimdSpeed.text = cityDetail.windSpeed
             weatherDescription.text = cityDetail.WeatherDescrip
-            // Do any additional setup after loading the view.
             
             guard let icon = cityDetail.icon, let url = URL(string: "https://openweathermap.org/img/wn/\(icon)@2x.png") else { return }
             weatherIcon.load(url: url)

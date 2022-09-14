@@ -112,12 +112,11 @@ class WeatherAPI {
             print(resultData)
             print(resultString)
             
-            print("--------------------------")
             let data = try! JSONDecoder().decode(Weatherlist.self, from: data!)
             DispatchQueue.main.async {
                 completion(data)
             }
-            print("\(data)는 data")
+            
             
         }
         
